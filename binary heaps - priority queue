@@ -1,0 +1,31 @@
+#include <iostream>
+#include <queue>
+#include <string>
+using namespace std;
+
+struct Task {
+    string name;
+    int priority;
+
+    bool operator<(const Task&other) const {
+        return priority > other.priority;
+    }
+};
+
+int main() {
+    priority_queue<Task> Matkul;
+
+    Matkul.push({"SDA", 1});
+    Matkul.push({"PBO", 3});
+    Matkul.push({"Agama", 4});
+    Matkul.push({"Kewarganegaraan", 2});
+
+    cout << "Daftar tugas berdasarkan prioritas:\n";
+    while (!Matkul.empty()) {
+        Task tugas = Matkul.top();
+        Matkul.pop();
+        cout << tugas.name << " (Prioritas: " << tugas.priority << ")\n";
+
+    }  
+    return 0;
+}
