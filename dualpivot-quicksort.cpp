@@ -48,7 +48,7 @@ void dualPivotQuicksort(vector<int>& arr, int low, int high) {
 }
 
 int main() {
-    vector<int> arr = {24, 8, 42, 75, 29, 77, 38, 57};
+    vector<int> arr = {5, 3, 7, 3, 10, 4, 9, 8};
     int n = arr.size();
     
     cout << "data sebelum diurutkan: ";
